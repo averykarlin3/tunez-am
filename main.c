@@ -11,6 +11,7 @@ int main() {
 	printf("Adding initial elements and printing list:\n");
 	print_list(list);
 	printf("\n");
-	printf("Freeing the list: \n");
+	printf("Freeing the list\n");
 	free_list(list);
+	return 0;
 }
