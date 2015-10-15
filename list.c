@@ -19,6 +19,15 @@ node* insert_front(node *lfront, int newData) {
 	return nfront;
 }
 
+node* new_node(int newData) {
+	node* new = insert_front(0, newData);
+	return new;
+}
+
+node* insert_alpha() {
+
+}
+
 node* free_list(node* lfront) {
 	while (lfront) {
 		node* temp = lfront;

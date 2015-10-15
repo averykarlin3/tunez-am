@@ -4,9 +4,12 @@
 #include <stdlib.h>
 
 typedef struct node{
-int data;
+char name[256];
+char artist[256];
 struct node* next;
 } node;
+
+node* table[26];
 
 void print_list(node* lfront);
 node* insert_front(node *lfront, int newData);
