@@ -2,6 +2,7 @@
 #define LIST_H 1
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct node{
 char name[256];
