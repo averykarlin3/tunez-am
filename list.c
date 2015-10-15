@@ -12,6 +12,15 @@ void print_list(node* lfront) {
 	printf("\n");
 }
 
+int list_len(node* lfront) {
+	int n = 0;
+	while(lfront->next) {
+		n++;
+		lfront = lfront->next
+	}
+	return n+1;
+}
+
 node* insert_front(node *lfront, int newData) {
 	node *nfront = (node *)malloc(sizeof(node));
 	nfront->data = newData;
