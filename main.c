@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "list.h"
 
 int main() {
@@ -15,5 +13,4 @@ int main() {
 	printf("\n");
 	printf("Freeing the list: \n");
 	free_list(list);
-	print_list(list);
 }
