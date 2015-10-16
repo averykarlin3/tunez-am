@@ -16,12 +16,16 @@ int list_len(node* lfront) {
 	return n+1;
 }
 
+void print_node(node* n) {
+	printf("%s -- %s -->\n", n->artist, n->name);
+}
+
 void print_list(node* lfront) {
 	if (lfront == NULL) {
 		return;
 	}
 	while (lfront) {
-		printf("%s -- %s --> ", lfront->artist, lfront->name);
+		print_node(lfront);
 		lfront = lfront->next;
 	}
 	printf("NULL \n");

@@ -20,3 +20,11 @@ node* findlib_song(node* table[], char songn[]) {
 	}
 	return 0;
 }
+
+void print_let(node* table[], char c) {
+	print_list(table[c - 97]);
+}
+
+void print_art(node* table[], char artistn[]) {
+	
+}

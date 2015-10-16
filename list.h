@@ -12,6 +12,7 @@ struct node* next;
 struct node* prev;
 } node;
 
+void print_node(node* n); 
 node* new_node(char n[], char a[]);
 int list_len(node* lfront);
 void print_list(node* lfront);
@@ -22,5 +23,7 @@ node* randomn(node* lfront);
 void rem(node* prev);
 node* find_song(node* lfront, char songn[]);
 node* find_artist(node* lfront, char artistn[]);
+void print_art(node* table[], char artistn[]);
+void print_char(node* table[], char c);
 
 #endif

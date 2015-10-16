@@ -8,8 +8,10 @@
 
 node* table[26];
 
-void print_node(node* n);
 node* add_song(node* table[], char n[], char a[]);
 node* findlib_song(node* table[], char songn[]);
+void print_let(node* table[]);
+void print_art(node* table[]);
+
 
 #endif
