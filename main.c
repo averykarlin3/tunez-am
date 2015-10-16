@@ -10,5 +10,11 @@ int main() {
 	insert_lexic(list, "quiet", "joshua");
 	printf("%d\n", list_len(list));
 	print_list(list);
+	print_list(find_song(list, "quiet"));
+	print_list(find_artist(list, "joshua"));
+	print_list(randomn(list));
+	print_list(randomn(list));
+	print_list(randomn(list));
+	print_list(randomn(list));
 	return 0;
 }

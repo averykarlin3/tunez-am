@@ -12,10 +12,14 @@ struct node* next;
 } node;
 
 node* new_node(char n[], char a[]);
-void print_list(node* lfront);
 int list_len(node* lfront);
+void print_list(node* lfront);
+node* free_list(node* lfront);
 node* insert_front(node *lfront, char n[], char a[]);
 node* insert_lexic(node* lfront, char n[], char a[]);
-node* free_list(node* lfront);
+node* randomn(node* lfront);
+void rem_next(node* prev);
+node* find_song(node* lfront, char songn[]);
+node* find_artist(node* lfront, char artistn[]);
 
 #endif

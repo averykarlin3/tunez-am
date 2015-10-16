@@ -27,6 +27,15 @@ void print_list(node* lfront) {
 	printf("NULL \n");
 }
 
+node* free_list(node* lfront) {
+	while (lfront) {
+		node* temp = lfront;
+		lfront = lfront->next;
+		free(temp);
+	}
+	return lfront;
+}
+
 
 node* insert_front(node *lfront, char n[], char a[]) {
 	node *nfront = (node *)malloc(sizeof(node));
@@ -90,11 +99,22 @@ void rem_next(node* prev) {
 	free(del);
 }
 
-node* free_list(node* lfront) {
+node* find_song(node* lfront, char songn[]) {
 	while (lfront) {
-		node* temp = lfront;
+		if (strcmp(lfront->name,songn) == 0) {
+			return lfront;
+		}
 		lfront = lfront->next;
-		free(temp);
 	}
-	return lfront;
+	return NULL;
+}
+
+node* find_artist(node* lfront, char artistn[]) {
+	while (lfront) {
+		if (strcmp(lfront->artist,artistn) == 0) {
+			return lfront;
+		}
+		lfront = lfront->next;
+	}
+	return NULL;
 }
