@@ -54,6 +54,24 @@ node* insert_lexic(node* lfront, char n[], char a[]) {
 	return new;
 }
 
+node* random(node* lfront) { /*Returns pointer to random node*/
+	int n = list_len(lfront);
+	int s = rand() % n;
+	int count = 1;
+	while(count < s) {
+		lfront = lfront->next;	
+		count++;
+	}
+	return lfront;
+}
+
+void rem_next(node* prev) {
+	node* del = prev->next;
+	node* after = del->next;
+	prev->next = after;
+	free(del);
+}
+
 node* free_list(node* lfront) {
 	while (lfront) {
 		node* temp = lfront;
