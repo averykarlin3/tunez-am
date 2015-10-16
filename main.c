@@ -8,6 +8,7 @@ int main() {
 	insert_lexic(list, "tomato sauce", "joshua");
 	insert_lexic(list, "potatoes", "joshua");
 	insert_lexic(list, "quiet", "joshua");
+	printf("%d\n", list_len(list));
 	print_list(list);
 	return 0;
 }
