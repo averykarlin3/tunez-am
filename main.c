@@ -1,6 +1,7 @@
 #include "list.h"
 
 int main() {
+	srand(time(NULL));
 	node *list = (node *)malloc(sizeof(node));
 	strcpy(list->name,"singing in the rain");
 	strcpy(list->artist,"john");
