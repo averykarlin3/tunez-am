@@ -22,7 +22,7 @@ void print_list(node* lfront) {
 		return;
 	}
 	while (lfront->next) {
-		//printf("%d, ", lfront->data);
+		printf("%s -- %s --> ", lfront->artist, lfront->name);
 		lfront = lfront->next;
 	}
 	printf("\n");
