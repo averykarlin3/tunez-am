@@ -58,6 +58,13 @@ node* random(node* lfront) { /*Returns pointer to random node*/
 	return lfront;
 }
 
+void rem_next(node* prev) {
+	node* del = prev->next;
+	node* after = del->next;
+	prev->next = after;
+	free(del);
+}
+
 node* free_list(node* lfront) {
 	while (lfront) {
 		node* temp = lfront;
