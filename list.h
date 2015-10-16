@@ -9,6 +9,7 @@ typedef struct node{
 char name[256];
 char artist[256];
 struct node* next;
+struct node* prev;
 } node;
 
 node* new_node(char n[], char a[]);
@@ -18,7 +19,7 @@ node* free_list(node* lfront);
 node* insert_front(node *lfront, char n[], char a[]);
 node* insert_lexic(node* lfront, char n[], char a[]);
 node* randomn(node* lfront);
-void rem_next(node* prev);
+void rem(node* prev);
 node* find_song(node* lfront, char songn[]);
 node* find_artist(node* lfront, char artistn[]);
 

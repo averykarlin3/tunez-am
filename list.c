@@ -31,6 +31,7 @@ node* free_list(node* lfront) {
 	while (lfront) {
 		node* temp = lfront;
 		lfront = lfront->next;
+		lfront->prev = 0;
 		free(temp);
 	}
 	return lfront;
@@ -42,6 +43,7 @@ node* insert_front(node *lfront, char n[], char a[]) {
 	strcpy(nfront->name, n);
 	strcpy(nfront->artist, a);
 	nfront->next = lfront;
+	nfront->prev = 0;
 	return nfront;
 }
 
@@ -53,30 +55,38 @@ node* insert_lexic(node* lfront, char n[], char a[]) {
 	strcpy(new->artist, a);
 	if (strcmp(lfront->artist, a) > 0) {
 		new->next = lfront;
+		new->prev = lfront->prev;
+		lfront->prev = new;
 		return new;
 	}
 	if (lfront->next == NULL) {
-			new->next = NULL;
-			lfront->next = new;
-			return new;
+		new->next = 0;
+		lfront->next = new;
+		new->prev = lfront;
+		new->next = 0;
+		return new;
 	}
 	while(strcmp((lfront->next)->artist, a) < 0) {
 		lfront = lfront->next;
-		if (lfront->next == NULL) {
-			new->next = NULL;
+		if (lfront->next == 0) {
+			new->next = 0;
 			lfront->next = new;
+			new->prev = lfront;
 			return new;
 		}
 	}
 	while(strcmp((lfront->next)->name, n) < 0) {
 		lfront = lfront->next;
-		if (lfront->next == NULL) {
-			new->next = NULL;
+		if (lfront->next == 0) {
+			new->next = 0;
 			lfront->next = new;
+			new->prev = lfront;
 			return new;
 		}
 	}
 	new->next = lfront->next;
+	(lfront->next)->prev = new;
+	new->prev = lfront;
 	lfront->next = new;
 	return new;
 }
@@ -92,11 +102,10 @@ node* randomn(node* lfront) { /*Returns pointer to random node*/
 	return lfront;
 }
 
-void rem_next(node* prev) {
-	node* del = prev->next;
-	node* after = del->next;
-	prev->next = after;
-	free(del);
+void rem(node* n) {
+	(n->prev)->next = n->next;
+	(n->next)->prev = n->prev;
+	free(n);
 }
 
 node* find_song(node* lfront, char songn[]) {
