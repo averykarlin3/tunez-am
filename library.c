@@ -1,10 +1,6 @@
 #include "library.h"
 #include "list.h"
 
-void print_node(node* n) {
-	printf("%s - %s\n", n->name, n->artist);
-}
-
 node* add_song(node* table[], char n[], char a[]) {
 	return insert_lexic(table[a[0] - 'a'], n, a);
 }
@@ -26,5 +22,10 @@ void print_let(node* table[], char c) {
 }
 
 void print_art(node* table[], char artistn[]) {
-	
+	node* fnode = table[artistn[0] - 97];
+	while(find_artist(fnode, artistn)) {
+		node* fnode = find_artist(fnode, artistn);
+		print_node(fnode);
+		fnode = fnode->next;
+	}
 }

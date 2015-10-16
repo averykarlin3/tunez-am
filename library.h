@@ -6,12 +6,10 @@
 #include <string.h>
 #include "list.h"
 
-node* table[26];
-
 node* add_song(node* table[], char n[], char a[]);
 node* findlib_song(node* table[], char songn[]);
-void print_let(node* table[]);
-void print_art(node* table[]);
+void print_let(node* table[], char c);
+void print_art(node* table[], char artistn[]);
 
 
 #endif

@@ -1,6 +1,7 @@
 #include "list.h"
 
 int main() {
+	node* table[26];
 	srand(time(NULL));
 	node *list = (node *)malloc(sizeof(node));
 	strcpy(list->name,"singing in the rain");
@@ -17,5 +18,7 @@ int main() {
 	print_list(randomn(list));
 	print_list(randomn(list));
 	print_list(randomn(list));
+	print_art(table, "john");
+	print_let(table, 'p');
 	return 0;
 }
