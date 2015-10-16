@@ -1,5 +1,21 @@
 #include "list.h"
 
+node* new_node(int newData) {
+	node* new = insert_front(0, newData);
+	return new;
+}
+
+int list_len(node* lfront) {
+	/*Returns: Length of the linked list
+	*/
+	int n = 0;
+	while(lfront->next) {
+		n++;
+		lfront = lfront->next
+	}
+	return n+1;
+}
+
 void print_list(node* lfront) {
 	if (lfront == NULL) {
 		printf("\n");
@@ -12,14 +28,6 @@ void print_list(node* lfront) {
 	printf("\n");
 }
 
-int list_len(node* lfront) {
-	int n = 0;
-	while(lfront->next) {
-		n++;
-		lfront = lfront->next
-	}
-	return n+1;
-}
 
 node* insert_front(node *lfront, int newData) {
 	node *nfront = (node *)malloc(sizeof(node));
@@ -28,12 +36,9 @@ node* insert_front(node *lfront, int newData) {
 	return nfront;
 }
 
-node* new_node(int newData) {
-	node* new = insert_front(0, newData);
-	return new;
-}
-
 node* insert_lexic(node* lfront, node* new) {
+	/*Function: Inserts the node based on a lexicographic ordering
+	Returns: Pointer to the new node */
 	while(strcmp((lfront->next)->name, new->name) <= 0) {
 		lfront = lfront->next;
 	}
