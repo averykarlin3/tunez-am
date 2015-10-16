@@ -18,5 +18,5 @@ node* findlib_song(node* table[], char songn[]) {
 			return temp;
 		}
 	}
-	return NULL;
+	return 0;
 }
