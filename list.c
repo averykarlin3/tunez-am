@@ -33,7 +33,7 @@ node* new_node(int newData) {
 	return new;
 }
 
-node* insert_alpha(node* lfront, node* new) {
+node* insert_lexic(node* lfront, node* new) {
 	while(strcmp((lfront->next)->name, new->name) <= 0) {
 		lfront = lfront->next;
 	}
