@@ -11,4 +11,4 @@ main.o: main.c
 	gcc -c main.c
 
 run:
-	./list
+	./library
