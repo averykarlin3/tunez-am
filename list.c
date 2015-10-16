@@ -18,7 +18,7 @@ int list_len(node* lfront) {
 
 void print_list(node* lfront) {
 	if (lfront == NULL) {
-		printf("\n");
+		printf("hi \n");
 		return;
 	}
 	while (lfront->next) {
@@ -43,9 +43,12 @@ node* insert_lexic(node* lfront, char n[], char a[]) {
 	node *new = (node *)malloc(sizeof(node));
 	strcpy(new->name, n);
 	strcpy(new->artist, a);
+	printf("hi\n");
 	while(strcmp((lfront->next)->artist, new->artist) <= 0) {
+		printf("hi2\n");
 		lfront = lfront->next;
 	}
+	printf("hi2\n");
 	while(strcmp((lfront->next)->name, new->name) <= 0) {
 		lfront = lfront->next;
 	}

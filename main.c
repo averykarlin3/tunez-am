@@ -5,9 +5,9 @@ int main() {
 	strcpy(list->name,"singing in the rain");
 	strcpy(list->artist,"john");
 	list->next = NULL;
-	insert_next(list, "tomato sauce", "joshua");
-	insert_next(list, "potatoes", "joshua");
-	insert_next(list, "quiet", "joshua");
+	insert_lexic(list, "tomato sauce", "joshua");
+	insert_lexic(list, "potatoes", "joshua");
+	insert_lexic(list, "quiet", "joshua");
 	print_list(list);
 	return 0;
 }
