@@ -11,11 +11,11 @@ char artist[256];
 struct node* next;
 } node;
 
+node* new_node(char n[], char a[]);
 void print_list(node* lfront);
-node* insert_front(node *lfront, int newData);
-node* free_list(node* lfront);
 int list_len(node* lfront);
-node* new_node(int newData);
-node* insert_lexic(node* lfront, node* new);
+node* insert_front(node *lfront, char n[], char a[]);
+node* insert_lexic(node* lfront, char n[], char a[]);
+node* free_list(node* lfront);
 
 #endif
