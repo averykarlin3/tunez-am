@@ -30,7 +30,7 @@ int main() {
 	add_song(table, "john", "fish");
 	add_song(table, "patrick", "star");
 	add_song(table, "picard", "jean-luc");
-	printf("Songs added");
+	printf("Songs added\n");
 	print_art(table, "john");
 	print_let(table, 'p');
 	return 0;

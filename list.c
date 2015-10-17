@@ -54,6 +54,9 @@ node* insert_front(node *lfront, char n[], char a[]) {
 node* insert_lexic(node* lfront, char n[], char a[]) {
 	/*Function: Inserts the node based on a lexicographic ordering
 	Returns: Pointer to the new node */
+	if(lfront == 0) {
+		return insert_front(lfront, n, a);
+	}
 	node *new = (node *)malloc(sizeof(node));
 	strcpy(new->name, n);
 	strcpy(new->artist, a);
