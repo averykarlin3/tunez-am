@@ -14,15 +14,20 @@ node* findlib_song(node* table[], char songn[]) {
 			return temp;
 		}
 	}
-	return 0;
+	return NULL;
+}
+
+node* findlib_artist(node* table[], char artistn[]) {
+	node* temp = table[artistn[0] - 'a'];
+	return find_artist(temp, artistn);
 }
 
 void print_let(node* table[], char c) {
-	print_list(table[c - 97]);
+	print_list(table[c - 'a']);
 }
 
 void print_art(node* table[], char artistn[]) {
-	node* fnode = table[artistn[0] - 97];
+	node* fnode = table[artistn[0] - 'a'];
 	while(find_artist(fnode, artistn)) {
 		node* fnode = find_artist(fnode, artistn);
 		print_node(fnode);
