@@ -2,7 +2,14 @@
 #include "list.h"
 
 node* add_song(node* table[], char n[], char a[]) {
-	return insert_lexic(table[a[0] - 'a'], n, a);
+	node* inserted = insert_lexic(table[a[0] - 'a'], n, a);
+	if (table[a[0] - 'a'] == NULL) {
+		table[a[0] - 'a'] = inserted;
+	}
+	else if (table[a[0] - 'a']->prev) {
+		table[a[0] - 'a'] = inserted;
+	}
+	return inserted;
 }
 
 node* findlib_song(node* table[], char songn[]) {
