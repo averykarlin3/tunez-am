@@ -50,7 +50,9 @@ void print_lib(node* table[]) {
 }
 
 node* del_song(node* song) {
-
+	node* deleted = song;
+	rem(song);
+	return deleted;
 }
 
 void del_lib(node* table[]) {

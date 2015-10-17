@@ -37,6 +37,13 @@ int main() {
 	print_art(table, "john");
 	print_let(table, 'p');
 	print_lib(table);
+	del_song(findlib_song(table, "hello"));
+	printf("Deleted hello\n");
+	print_art(table, "john");
 	printf("Shuffle List:\n");
+	/*Insert shuffle here*/
+	printf("Delete library\n");
+	del_lib(table);
+	print_lib(table);
 	return 0;
 }
