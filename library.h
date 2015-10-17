@@ -12,5 +12,4 @@ node* findlib_artist(node* table[], char artistn[]);
 void print_let(node* table[], char c);
 void print_art(node* table[], char artistn[]);
 
-
 #endif
