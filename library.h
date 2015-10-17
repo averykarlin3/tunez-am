@@ -1,9 +1,6 @@
 #ifndef LIBRARY_H
 #define LIBRARY_H 1
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "list.h"
 
 node* add_song(node* table[], char n[], char a[]);
