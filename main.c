@@ -25,6 +25,12 @@ int main() {
 	print_list(randomn(list));
 	print_list(randomn(list));
 	printf("Specific List Functions:\n");
+	add_song(table, "john", "hello");
+	add_song(table, "james", "goodbye");
+	add_song(table, "john", "fish");
+	add_song(table, "patrick", "star");
+	add_song(table, "picard", "jean-luc");
+	printf("Songs added");
 	print_art(table, "john");
 	print_let(table, 'p');
 	return 0;
