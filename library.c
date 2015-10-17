@@ -41,3 +41,14 @@ void print_lib(node* table[]) {
 		print_let(table, c);
 	}
 }
+
+node* del_song(node* song) {
+
+}
+
+void del_lib(node* table[]) {
+	char c = 'a';
+	while(c <= 'z') {
+		print_let(table, c);
+	}
+}
