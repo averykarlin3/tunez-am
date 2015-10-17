@@ -34,3 +34,10 @@ void print_art(node* table[], char artistn[]) {
 		fnode = fnode->next;
 	}
 }
+
+void print_lib(node* table[]) {
+	char c = 'a';
+	while(c <= 'z') {
+		print_let(table, c);
+	}
+}

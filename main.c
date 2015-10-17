@@ -34,6 +34,7 @@ int main() {
 	printf("%p\n", table['p' - 'a']);
 	print_art(table, "john");
 	print_let(table, 'p');
+	print_lib(table);
 	printf("Shuffle List:\n");
 	return 0;
 }
