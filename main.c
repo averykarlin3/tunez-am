@@ -9,6 +9,7 @@ int main() {
 		c++;
 	}
 	srand(time(NULL));
+	printf("List function testing\n");
 	node *list = (node *)malloc(sizeof(node));
 	strcpy(list->name,"singing in the rain");
 	strcpy(list->artist,"john");
@@ -25,7 +26,7 @@ int main() {
 	print_list(randomn(list));
 	print_list(randomn(list));
 	print_list(randomn(list));
-	printf("Specific List Functions:\n");
+	printf("Specific Library Functions:\n");
 	add_song(table, "hello", "john");
 	add_song(table, "goodbye", "james");
 	add_song(table, "fish", "john");
