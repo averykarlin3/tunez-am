@@ -61,3 +61,7 @@ void del_lib(node* table[]) {
 		print_let(table, c);
 	}
 }
+
+void shuffle(node* table[], int n) {
+
+}

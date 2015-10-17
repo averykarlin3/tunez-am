@@ -14,5 +14,6 @@ void print_art(node* table[], char artistn[]);
 void print_lib(node* table[]);
 node* del_song(node* song);
 void del_lib(node* table[]);
+void shuffle(node* table[], int n);
 
 #endif
