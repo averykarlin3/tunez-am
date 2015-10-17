@@ -41,7 +41,9 @@ int main() {
 	printf("Deleted hello\n");
 	print_art(table, "john");
 	printf("Shuffle List:\n");
-	/*Insert shuffle here*/
+	shuffle(table, 2);
+	shuffle(table, 2);
+	shuffle(table, 2);
 	printf("Delete library\n");
 	del_lib(table);
 	print_lib(table);
