@@ -1,4 +1,5 @@
 #include "list.h"
+#include "library.h"
 
 int main() {
 	node* table[26];
@@ -25,11 +26,12 @@ int main() {
 	print_list(randomn(list));
 	print_list(randomn(list));
 	printf("Specific List Functions:\n");
-	add_song(table, "john", "hello");
-	add_song(table, "james", "goodbye");
-	add_song(table, "john", "fish");
-	add_song(table, "patrick", "star");
-	add_song(table, "picard", "jean-luc");
+	add_song(table, "hello", "john");
+	add_song(table, "goodbye", "james");
+	add_song(table, "fish", "john");
+	add_song(table, "star", "patrick");
+	add_song(table, "jean-luc", "picard");
+	print_list(table['j'-'a']);
 	printf("Songs added if not 0:\n");
 	printf("%p\n", table['p' - 'a']);
 	print_art(table, "john");
