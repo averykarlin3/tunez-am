@@ -30,17 +30,20 @@ node* findlib_artist(node* table[], char artistn[]) {
 }
 
 void print_let(node* table[], char c) {
+	printf("%c artists: ",c);
 	print_list(table[c - 'a']);
 }
 
 void print_art(node* table[], char artistn[]) {
 	node* fnode = table[artistn[0] - 'a'];
 	while(find_artist(fnode, artistn)) {
-		node* fnode = find_artist(fnode, artistn);
+		//node* fnode = print_node(find_artist(fnode, artistn));
 		if(!fnode) {
 			return;
 		}
-		print_node(fnode);
+		if (strcmp(fnode->artist, artistn) == 0) {
+			print_node(fnode);
+		}
 		fnode = fnode->next;
 	}
 }

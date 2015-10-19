@@ -17,7 +17,7 @@ int list_len(node* lfront) {
 }
 
 void print_node(node* n) {
-	printf("%s -- %s -->\n", n->artist, n->name);
+	printf("%s -- %s -->  ", n->artist, n->name);
 }
 
 void print_list(node* lfront) {
@@ -126,7 +126,7 @@ node* find_artist(node* lfront, char artistn[]) {
 	while (lfront) {
 		if (strcmp(lfront->artist,artistn) == 0) {
 			return lfront;
-		}
+		}	
 		lfront = lfront->next;
 	}
 	return NULL;
