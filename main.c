@@ -35,9 +35,9 @@ int main() {
 	print_list(table['j'-'a']);
 	printf("Songs added if not 0:\n");
 	printf("%p\n", table['p' - 'a']);
-	print_art(table, "john");
 	print_let(table, 'p');
 	print_lib(table);
+	print_art(table, "john");
 	del_song(findlib_song(table, "hello"));
 	printf("Deleted hello\n");
 	print_art(table, "john");

@@ -46,6 +46,7 @@ void print_lib(node* table[]) {
 	char c = 'a';
 	while(c <= 'z') {
 		print_let(table, c);
+		c++;
 	}
 }
 
