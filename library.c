@@ -16,6 +16,7 @@ node* findlib_song(node* table[], char songn[]) {
 	int i;
 	node* temp;
 	for (i = 0; i < 26; i++) {
+		printf("%c\n",'a'+i);
 		temp = find_song(table[i], songn);
 		if (temp) {
 			return temp;
@@ -38,6 +39,7 @@ void print_art(node* table[], char artistn[]) {
 	node* fnode = table[artistn[0] - 'a'];
 	while(find_artist(fnode, artistn)) {
 		//node* fnode = print_node(find_artist(fnode, artistn));
+		//printf("hi2\n");
 		if(!fnode) {
 			return;
 		}
