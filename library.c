@@ -58,16 +58,14 @@ void print_lib(node* table[]) {
 	}
 }
 
-node* del_song(node* song) {
-	node* deleted = song;
+void del_song(node* song) {
 	rem(song);
-	return deleted;
 }
 
 void del_lib(node* table[]) {
 	char c = 'a';
 	while(c <= 'z') {
-		print_let(table, c);
+		free_list(table[c-'a']);
 	}
 }
 
