@@ -69,6 +69,7 @@ void del_lib(node* table[]) {
 	char c = 'a';
 	while(c <= 'z') {
 		free_list(table[c-'a']);
+		c++;
 	}
 }
 
