@@ -129,5 +129,5 @@ node* find_artist(node* lfront, char artistn[]) {
 		}
 		lfront = lfront->next;
 	}
-	return 0;
+	return NULL;
 }
