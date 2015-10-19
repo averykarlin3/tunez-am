@@ -32,7 +32,9 @@ node* free_list(node* lfront) {
 	while (lfront) {
 		node* temp = lfront;
 		lfront = lfront->next;
-		lfront->prev = 0;
+		if (lfront) {
+			lfront->prev = 0;
+		}
 		free(temp);
 	}
 	return lfront;

@@ -48,6 +48,7 @@ int main() {
 	shuffle(table, 2);
 	shuffle(table, 2);
 	printf("Delete library\n");
+	print_let(table, 'j');
 	del_lib(table);
 	print_lib(table);
 	return 0;
