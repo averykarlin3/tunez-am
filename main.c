@@ -38,8 +38,9 @@ int main() {
 	print_let(table, 'p');
 	print_lib(table);
 	print_art(table, "john");
-	del_song(findlib_song(table, "hello"));
-	printf("madeithere\n");
+	del_song(findlib_song(table, "hello"), table);
+	del_song(table['j'-'a'], table);
+	print_let(table, 'j');
 	printf("Deleted hello\n");
 	print_art(table, "john");
 	printf("Shuffle List:\n");

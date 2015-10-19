@@ -16,7 +16,6 @@ node* findlib_song(node* table[], char songn[]) {
 	int i;
 	node* temp;
 	for (i = 0; i < 26; i++) {
-		printf("%c\n",'a'+i);
 		temp = find_song(table[i], songn);
 		if (temp) {
 			return temp;
@@ -59,7 +58,10 @@ void print_lib(node* table[]) {
 	}
 }
 
-void del_song(node* song) {
+void del_song(node* song, node* table[]) {
+	if (song->prev == NULL) {
+		table[(song->artist)[0] - 'a'] = song->next;
+	}
 	rem(song);
 }
 

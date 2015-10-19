@@ -107,8 +107,12 @@ node* randomn(node* lfront) { /*Returns pointer to random node*/
 }
 
 void rem(node* n) {
-	(n->prev)->next = n->next;
-	(n->next)->prev = n->prev;
+	if (n->prev != NULL) {
+		(n->prev)->next = n->next;
+	}
+	if (n->next != NULL) {
+		(n->next)->prev = n->prev;
+	}
 	free(n);
 }
 
