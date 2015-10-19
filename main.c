@@ -39,6 +39,7 @@ int main() {
 	print_lib(table);
 	print_art(table, "john");
 	del_song(findlib_song(table, "hello"));
+	printf("madeithere\n");
 	printf("Deleted hello\n");
 	print_art(table, "john");
 	printf("Shuffle List:\n");
