@@ -63,7 +63,7 @@ void del_song(node* song) {
 void del_lib(node* table[]) {
 	char c = 'a';
 	while(c <= 'z') {
-		free_list(table, c);
+		free_list(table[c-'a']);
 	}
 }
 
