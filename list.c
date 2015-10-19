@@ -21,9 +21,6 @@ void print_node(node* n) {
 }
 
 void print_list(node* lfront) {
-	if (lfront == 0) {
-		return;
-	}
 	while (lfront) {
 		print_node(lfront);
 		lfront = lfront->next;
