@@ -39,6 +39,9 @@ void print_art(node* table[], char artistn[]) {
 		node* fnode = find_artist(fnode, artistn);
 		print_node(fnode);
 		fnode = fnode->next;
+		if(!fnode) {
+			return;
+		}
 	}
 }
 
