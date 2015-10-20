@@ -17,9 +17,12 @@ int main() {
 	insert_lexic(list, "tomato sauce", "joshua");
 	insert_lexic(list, "potatoes", "joshua");
 	insert_lexic(list, "quiet", "joshua");
-	printf("%d\n", list_len(list));
+	printf("List length (after adding in order): %d\n", list_len(list));
+	printf("Print list:\n");
 	print_list(list);
+	printf("Find song:\n");
 	print_list(find_song(list, "quiet"));
+	printf("Find artist:\n");
 	print_list(find_artist(list, "joshua"));
 	printf("Random Node:\n");
 	print_list(randomn(list));
