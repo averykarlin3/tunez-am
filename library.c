@@ -48,6 +48,7 @@ void print_art(node* table[], char artistn[]) {
 		}
 		fnode = fnode->next;
 	}
+	printf("\n");
 }
 
 void print_lib(node* table[]) {
