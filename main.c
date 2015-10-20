@@ -44,12 +44,11 @@ int main() {
 	printf("Deleted hello\n");
 	print_art(table, "john");
 	printf("Shuffle List:\n");
-	shuffle(table, 2);
-	shuffle(table, 2);
-	shuffle(table, 2);
+	shuffle(table, 6);
 	printf("Delete library\n");
 	print_let(table, 'j');
 	del_lib(table);
 	print_lib(table);
+	shuffle(table,2);
 	return 0;
 }

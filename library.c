@@ -75,5 +75,28 @@ void del_lib(node* table[]) {
 }
 
 void shuffle(node* table[], int n) {
-
+	int i;
+	int j = 1;
+	int totlength;
+	for (i = 0; i < 26; i++) {
+		if (table[i] != NULL) {
+			j = 0;
+			totlength += list_len(table[i]);
+		}
+	}
+	if (j) {
+		printf("Your library is empty\n");
+		return;
+	}
+	i = rand() % 26;
+	while (n > 0) {
+		if (table[i] != NULL) {
+			if (list_len(table[i]) > rand() % totlength ) { //makes it so each node has equal prob of being chosen
+				print_node(randomn(table[i]));
+				printf("\n");
+				n -= 1;
+			}
+		}
+		i = rand() % 26;
+	}
 }

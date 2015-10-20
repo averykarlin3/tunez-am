@@ -101,7 +101,7 @@ node* randomn(node* lfront) { /*Returns pointer to random node*/
 	int n = list_len(lfront);
 	int s = rand() % n;
 	int count = 1;
-	while(count < s) {
+	while(count <= s) {
 		lfront = lfront->next;	
 		count++;
 	}
